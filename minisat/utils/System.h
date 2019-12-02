@@ -21,7 +21,9 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 #ifndef Minisat_System_h
 #define Minisat_System_h
 
-#if defined(__linux__)
+#include <stdio.h>  /* For __GLIBC__  define */
+
+#if defined(__linux__) and defined(__GLIBC__)
 #include <fpu_control.h>
 #endif
 
